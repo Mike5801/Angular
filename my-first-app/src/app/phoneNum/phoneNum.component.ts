@@ -17,26 +17,26 @@ export class PhoneNum {
     ngOnInit(): void {
     }
     
-    isNumber() {
-        if (pattern.test(this.phoneNum)){
+    isNumber(phoneNum) {
+        if (pattern.test(phoneNum)){
             return true;
         }
         return false;
     }
 
-    isLengthTen() {
-        if (this.phoneNum.length == 10) {
+    isLengthTen(phoneNum) {
+        if (phoneNum.length == 10) {
             return true;
         }
         return false;
     }
 
-    isValidPhone() {
-        if (!this.isNumber() || !this.isLengthTen()) {
-            this.validPhone = false
+    isValidPhone(phoneNum) {
+        if (!this.isNumber(phoneNum) || !this.isLengthTen(phoneNum)) {
+            //this.validPhone = false;
             return false;
         }
-        this.validPhone = true;
+        //this.validPhone = true;
         return true;
     }
 
