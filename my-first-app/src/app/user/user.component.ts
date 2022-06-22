@@ -10,13 +10,6 @@ export class User {
     constructor() {
     }
 
-    isEmpty() {
-        if (this.username == '') {
-            return true;
-        }
-        return false;
-    }
-
     onResetUser() {
         this.username = '';
     }
