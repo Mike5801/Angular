@@ -10,6 +10,7 @@ import { WarningAlert } from './warningAlert/warningAlert.component';
 import { SuccessAlert } from './successAlert/successAlert.component';
 import { Alerts } from './alerts/alerts.component';
 import { ErrorAlert } from './errorAlert/errorAlert.component';
+import { User } from './user/user.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ErrorAlert } from './errorAlert/errorAlert.component';
     WarningAlert,
     SuccessAlert,
     ErrorAlert,
-    Alerts
+    Alerts,
+    User
   ],
   imports: [
     BrowserModule,

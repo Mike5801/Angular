@@ -1,0 +1,12 @@
+<label>Username:</label>
+<input 
+    type="text"
+    class="form-control"
+    [(ngModel)]="username">
+<button 
+    class="btn btn-primary" [disabled]="isEmpty()" 
+    (click)="onResetUser()">
+    Reset User
+</button>
+
+<p [hidden]="isEmpty()"> Username is: {{ username }} </p>
