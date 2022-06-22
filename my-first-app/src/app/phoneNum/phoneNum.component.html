@@ -1,0 +1,16 @@
+<label>Phone Number:</label>
+<input 
+    type="text" 
+    class="form-control"
+    [(ngModel)]="phoneNum">
+
+<p [hidden]="isValidPhone()" class="invalid">The phone number is not valid</p>
+<p [hidden]="!validPhone" class="valid">The phone number is valid</p>
+
+<button 
+    class="btn btn-primary"
+    [disabled]="!validPhone"
+    (click)="onDisplayPhoneNum()">
+    Display Phone Number
+</button>
+<p> {{ validPhoneNum }} </p>

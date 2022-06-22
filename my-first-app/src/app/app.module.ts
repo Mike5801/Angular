@@ -11,6 +11,7 @@ import { SuccessAlert } from './successAlert/successAlert.component';
 import { Alerts } from './alerts/alerts.component';
 import { ErrorAlert } from './errorAlert/errorAlert.component';
 import { User } from './user/user.component';
+import { PhoneNum } from './phoneNum/phoneNum.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { User } from './user/user.component';
     SuccessAlert,
     ErrorAlert,
     Alerts,
-    User
+    User,
+    PhoneNum
   ],
   imports: [
     BrowserModule,
