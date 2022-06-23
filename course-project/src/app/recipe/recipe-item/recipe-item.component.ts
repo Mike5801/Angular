@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 
 @Component({
-    selector: 'recipe-item',
+    selector: 'app-recipe-item',
     templateUrl: './recipe-item.component.html',
     styleUrls: ['./recipe-item.component.css']
 })

@@ -7,6 +7,7 @@ import { Component } from "@angular/core";
 })
 
 export class Header {
+    collapsed = true;
     constructor() {
 
     }
