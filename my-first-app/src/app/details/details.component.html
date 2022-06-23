@@ -1,0 +1,11 @@
+<button class="btn btn-primary"
+    (click)="onShowDetails()">
+    Display Details
+</button>
+<p *ngIf="showDetails">This are the details of the paragraph</p>
+<p *ngFor="let click of numberClicks">
+    <span [ngStyle]="{backgroundColor: getColor(click)}"
+        [ngClass]="{gt5: numberClicks.indexOf(click) >= 4}">
+        {{ click }}
+    </span>
+</p>
