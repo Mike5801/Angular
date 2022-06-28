@@ -5,3 +5,9 @@
 p {
     color: blue;
 }
+
+.counter {
+    color: green;
+    font-size: large;
+    font-weight: 500;
+}

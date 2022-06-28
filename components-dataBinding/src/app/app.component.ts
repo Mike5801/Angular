@@ -10,6 +10,9 @@ export class AppComponent {
   
   title = 'components-dataBinding';
 
+  appCounter: number = 0;
+  numbers: number[] = [];
+
   onServerAdded(serverData: {serverName: string, serverContent: string}) {
     this.serverElements.push({
       type: 'server',
@@ -24,6 +27,11 @@ export class AppComponent {
       name: blueprintData.blueprintName,
       content: blueprintData.blueprintContent
     });
+  }
+
+  onGameStarted(gameStartData: { counter: number }) {
+    this.appCounter = gameStartData.counter;
+    this.numbers.push(gameStartData.counter);
   }
 
   onChangeFirst() {

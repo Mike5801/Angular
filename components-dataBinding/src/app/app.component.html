@@ -14,7 +14,7 @@
       *ngFor="let serverElement of serverElements"
       [serverElementAlias]="serverElement"
       [name]="serverElement.name">
-      <p>
+      <p #contentParagraph>
         <strong *ngIf="serverElement.type === 'server'" style="color: red">
             {{ serverElement.content }}
         </strong>
@@ -25,4 +25,14 @@
       </app-server-element>
     </div>
   </div>
+  <hr>
+  <h2>Assignment 4</h2>
+  <app-game-control (gameStarted)="onGameStarted($event)"></app-game-control>
+  <br>
+  <span class="counter"> {{ appCounter }} </span>
+  <hr>
+  <app-odd *ngFor="let number of numbers" [number]="number"></app-odd>
+  <hr>
+  <app-even *ngFor="let number of numbers" [number]="number"></app-even>
 </div>
+

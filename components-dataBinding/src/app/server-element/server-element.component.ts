@@ -1,4 +1,5 @@
 import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, 
+  ContentChild, 
   DoCheck, 
   ElementRef, 
   Input, 
@@ -25,7 +26,8 @@ export class ServerElementComponent implements
   OnDestroy {
     @Input('serverElementAlias') element: {type: string, name: string, content: string};
     @Input() name: string;
-    @ViewChild('heading', {static: true}) header: ElementRef
+    @ViewChild('heading', {static: true}) header: ElementRef;
+    @ContentChild('contentParagraph', {static: true}) paragraph: ElementRef;
     constructor() {
       console.log('constructor called!');
     }
@@ -37,31 +39,33 @@ export class ServerElementComponent implements
     }
 
     ngOnInit(): void {
-      console.log('ngOnInit called!');
-      console.log('Text Content: ' + this.header.nativeElement.textContent);
+      // console.log('ngOnInit called!');
+      // console.log('Text Content: ' + this.header.nativeElement.textContent);
+      // console.log('Text content of paragraph: ' + this.paragraph.nativeElement.textContent);
     }
 
     ngDoCheck(): void {
-      console.log('ngDoCheck called!');
+      // console.log('ngDoCheck called!');
     }
 
     ngAfterContentInit(): void {
-        console.log('ngAfterContentInit called!');
+      // console.log('ngAfterContentInit called!');
     }
 
     ngAfterContentChecked(): void {
-      console.log('ngAfterContentChecked called!');
+      // console.log('ngAfterContentChecked called!');
     }
     ngAfterViewInit(): void {
-        console.log('ngAfterViewInit called!');
-        console.log('Text Content: ' + this.header.nativeElement.textContent);
+      // console.log('ngAfterViewInit called!');
+      // console.log('Text Content: ' + this.header.nativeElement.textContent);
+      // console.log('Text content of paragraph: ' + this.paragraph.nativeElement.textContent);
     }
 
     ngAfterViewChecked(): void {
-      console.log('ngAfterViewChecked called!');
+      // console.log('ngAfterViewChecked called!');
     }
 
     ngOnDestroy(): void {
-        console.log('ngOnDestroy called!');
+      // console.log('ngOnDestroy called!');
     }
 }
