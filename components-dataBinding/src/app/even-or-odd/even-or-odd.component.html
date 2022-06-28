@@ -1,0 +1,32 @@
+<h2>Number in counter {{ number }} is:</h2>
+
+<div class="row">
+    <div class="col-xs-6">
+        <div class="panel panel-default" *ngIf="number % 2 != 0; else notOdd" style="background-color: green;">
+            <div class="panel-body">
+                <span style="color: white;">Odd</span>
+            </div>
+        </div>
+        <ng-template #notOdd>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <span>Odd</span>
+                </div>
+            </div>
+        </ng-template>
+    </div>
+    <div class="col-xs-6">
+        <div class="panel panel-default" *ngIf="number % 2 === 0; else notEven" style="background-color: green;">
+            <div class="panel-body">
+                <span style="color: white">Even</span>
+            </div>
+        </div>
+        <ng-template #notEven>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <span>Even</span>
+                </div>
+            </div>
+        </ng-template>
+    </div>
+</div>

@@ -29,10 +29,13 @@
   <h2>Assignment 4</h2>
   <app-game-control (gameStarted)="onGameStarted($event)"></app-game-control>
   <br>
-  <span class="counter"> {{ appCounter }} </span>
+  <span class="counter"> Counter: {{ appCounter }} </span>
+  <app-even-or-odd [number]="appCounter"></app-even-or-odd>
   <hr>
+  <h3>Odd Numbers</h3>
   <app-odd *ngFor="let number of numbers" [number]="number"></app-odd>
   <hr>
+  <h3>Even Numbers</h3>
   <app-even *ngFor="let number of numbers" [number]="number"></app-even>
 </div>
 
