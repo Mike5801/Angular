@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'course-project';
+  recipe: boolean;
+  shopping: boolean;
+
+
+  onClickedRecipe(display: {recipe: boolean, shop: boolean}) {
+    this.recipe = display.recipe;
+    this.shopping = display.shop;
+  }
+
+  onClickedShopping(display: {recipe: boolean, shop: boolean}) {
+    this.recipe = display.recipe;
+    this.shopping = display.shop;
+  }
 }

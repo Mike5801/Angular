@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, EventEmitter, Output } from "@angular/core";
 
 @Component({
     selector: 'app-header',
@@ -8,7 +8,24 @@ import { Component } from "@angular/core";
 
 export class Header {
     collapsed = true;
+    @Output() recipeClicked = new EventEmitter<{recipe: boolean, shop: boolean}>();
+    @Output() shoppingClicked = new EventEmitter<{recipe: boolean, shop: boolean}>();
+
     constructor() {
 
+    }
+
+    onRecipesClick() {
+        this.recipeClicked.emit({
+            recipe: true,
+            shop: false
+        })
+    }
+
+    onShoppingClick() {
+        this.shoppingClicked.emit({
+            recipe: false,
+            shop: true
+        })
     }
 }
