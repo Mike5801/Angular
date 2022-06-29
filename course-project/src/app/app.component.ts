@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'course-project';
-  recipe: boolean;
+  recipe: boolean = true;
   shopping: boolean;
 
 
