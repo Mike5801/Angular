@@ -8,24 +8,21 @@ import { Component, EventEmitter, Output } from "@angular/core";
 
 export class Header {
     collapsed = true;
-    @Output() recipeClicked = new EventEmitter<{recipe: boolean, shop: boolean}>();
-    @Output() shoppingClicked = new EventEmitter<{recipe: boolean, shop: boolean}>();
+    @Output() featureClicked = new EventEmitter<string>();
 
     constructor() {
 
     }
 
-    onRecipesClick() {
-        this.recipeClicked.emit({
-            recipe: true,
-            shop: false
-        })
+    onRecipesClick(feature: string) {
+        this.featureClicked.emit(
+            feature
+        )
     }
 
-    onShoppingClick() {
-        this.shoppingClicked.emit({
-            recipe: false,
-            shop: true
-        })
+    onShoppingClick(feature: string) {
+        this.featureClicked.emit(
+            feature
+        )
     }
 }

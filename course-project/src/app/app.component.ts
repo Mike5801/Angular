@@ -7,17 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'course-project';
-  recipe: boolean = true;
-  shopping: boolean;
+  featureClicked: string = 'recipe';
 
-
-  onClickedRecipe(display: {recipe: boolean, shop: boolean}) {
-    this.recipe = display.recipe;
-    this.shopping = display.shop;
-  }
-
-  onClickedShopping(display: {recipe: boolean, shop: boolean}) {
-    this.recipe = display.recipe;
-    this.shopping = display.shop;
+  onClickedFeature(feature) {
+    this.featureClicked = feature
   }
 }
