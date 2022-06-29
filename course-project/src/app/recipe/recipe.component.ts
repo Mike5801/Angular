@@ -7,7 +7,14 @@ import { Component } from "@angular/core";
 })
 
 export class Recipe {
+    recipeSelectedItem: Recipe;
+
     constructor() {
         
+    }
+
+    getSelectedRecipe(selectedRecipe: Recipe) {
+        this.recipeSelectedItem = selectedRecipe;
+        console.log(this.recipeSelectedItem);
     }
 }
