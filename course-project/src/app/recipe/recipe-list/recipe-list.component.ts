@@ -8,7 +8,7 @@ import { Recipe } from '../recipe.model';
 })
 
 export class RecipeList {
-    @Output() recipeItemClicked1 = new EventEmitter<Recipe>();
+    @Output() recipeItemWasClicked = new EventEmitter<Recipe>();
     
     recipes: Recipe[] = [
         new Recipe('Test Recipe', 'Test description', 'https://i2.wp.com/shewearsmanyhats.com/wp-content/uploads/2014/05/mothers-day-desserts-2.jpg'),
@@ -21,7 +21,7 @@ export class RecipeList {
     }
 
     onRecipeClicked(selectedRecipe: Recipe) {
-        this.recipeItemClicked1.emit(
+        this.recipeItemWasClicked.emit(
             selectedRecipe
         )
     }

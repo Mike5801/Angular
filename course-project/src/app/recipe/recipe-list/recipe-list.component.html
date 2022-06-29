@@ -8,6 +8,8 @@
 <hr>
 <div class="row">
     <div class="col-xs-12">
-        <app-recipe-item *ngFor="let recipe of recipes" [recipeItem]="recipe" (recipeItemClicked)="onRecipeClicked($event)"></app-recipe-item>
+        <app-recipe-item *ngFor="let recipe of recipes" 
+        [recipeItem]="recipe" 
+        (recipeItemClicked)="onRecipeClicked(recipe)"></app-recipe-item>
     </div>
 </div>

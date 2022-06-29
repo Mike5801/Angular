@@ -9,16 +9,13 @@ import { Recipe } from "../recipe.model";
 
 export class RecipeItem {
     @Input() recipeItem: Recipe;
-    @Output() recipeItemClicked = new EventEmitter<Recipe>();
+    @Output() recipeItemClicked = new EventEmitter<void>();
 
     constructor() {
 
     }
 
     onRecipeClick() {
-        //console.log(this.recipeItem);
-        this.recipeItemClicked.emit(
-            this.recipeItem
-        )
+        this.recipeItemClicked.emit();
     }
 }
