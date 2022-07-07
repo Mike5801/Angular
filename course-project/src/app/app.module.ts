@@ -8,6 +8,7 @@ import { RecipeDetail } from './recipe/recipe-detail/recipe-detail.component';
 import { RecipeItem } from './recipe/recipe-item/recipe-item.component';
 import { RecipeList } from './recipe/recipe-list/recipe-list.component';
 import { Recipe } from './recipe/recipe.component';
+import { DropdownDirective } from './shared/dropdown.directive';
 import { ShoppingListEdit } from './shopping/shopping-list-edit/shopping-list-edit.component';
 import { ShoppingList } from './shopping/shopping-list/shopping-list.component';
 
@@ -21,6 +22,7 @@ import { ShoppingList } from './shopping/shopping-list/shopping-list.component';
     RecipeList,
     ShoppingList,
     ShoppingListEdit,
+    DropdownDirective
   ],
   imports: [
     BrowserModule,
