@@ -14,7 +14,7 @@ export class DropdownDirective implements OnInit {
     
     }
 
-    @HostListener('click') onClick(eventData: Event) {
-        this.dropDownClicked = !this.dropDownClicked;
+    @HostListener('document:click', ['$event']) onClick(eventData: Event) {
+        this.dropDownClicked = this.elRef.nativeElement.contains(event.target) ? !this.dropDownClicked : false;
     }
 }
