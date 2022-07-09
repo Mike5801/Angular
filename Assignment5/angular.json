@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "services-dependencies": {
+    "Assignment5": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/services-dependencies",
+            "outputPath": "dist/assignment5",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "services-dependencies:build:production"
+              "browserTarget": "Assignment5:build:production"
             },
             "development": {
-              "browserTarget": "services-dependencies:build:development"
+              "browserTarget": "Assignment5:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "services-dependencies:build"
+            "browserTarget": "Assignment5:build"
           }
         },
         "test": {
