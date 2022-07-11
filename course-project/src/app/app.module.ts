@@ -9,7 +9,8 @@ import { RecipeItem } from './recipe/recipe-item/recipe-item.component';
 import { RecipeList } from './recipe/recipe-list/recipe-list.component';
 import { RecipeComponent } from './recipe/recipe.component';
 import { DropdownDirective } from './shared/dropdown.directive';
-import { ShoppingListEdit } from './shopping/shopping-list-edit/shopping-list-edit.component';
+import { ShoppingListService } from './shopping/shopping-list.service';
+import { ShoppingListEdit } from './shopping/shopping-list/shopping-list-edit/shopping-list-edit.component';
 import { ShoppingList } from './shopping/shopping-list/shopping-list.component';
 
 @NgModule({
@@ -28,7 +29,7 @@ import { ShoppingList } from './shopping/shopping-list/shopping-list.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ShoppingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
