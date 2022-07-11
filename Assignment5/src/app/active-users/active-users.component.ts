@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output} from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import { CounterService } from '../counter.service';
 import { UsersService } from '../users.service';
 
@@ -9,10 +9,14 @@ import { UsersService } from '../users.service';
   providers: [CounterService]
 })
 
-export class ActiveUsersComponent {
-  @Input() users: string[];
+export class ActiveUsersComponent implements OnInit{
+  users: string[];
 
   constructor(private usersService: UsersService) { }
+
+ngOnInit(): void {
+    this.users = this.usersService.activeUsers;
+}
 
   onSetToInactive(id: number) {
     this.usersService.onSetToInactive(id);
