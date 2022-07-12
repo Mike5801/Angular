@@ -1,4 +1,5 @@
 import { EventEmitter, Injectable } from "@angular/core";
+import { Ingredient } from "../shared/ingredient.model";
 import { Recipe } from "./recipe.model";
 
 @Injectable()
@@ -6,9 +7,22 @@ export class RecipeService {
     recipeSelected = new EventEmitter<Recipe>();
 
     private recipes: Recipe[] = [
-        new Recipe('Test Recipe', 'Test description', 'https://i2.wp.com/shewearsmanyhats.com/wp-content/uploads/2014/05/mothers-day-desserts-2.jpg'),
-        new Recipe('Test Recipe 2', 'Test description 2', 'https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F43%2F2022%2F03%2F20%2F212721-Indian-Chicken-Curry-Murgh-Kari-mfs_004.jpg'),
-        new Recipe('Test Recipe 3', 'Data binding between components', 'https://www.acouplecooks.com/wp-content/uploads/2021/03/Cheese-Tortellini-011-735x919.jpg')
+        new Recipe('Tasty Schnitzel', 
+        'A super-tasty Schnitzel', 
+        'https://cdn7.kiwilimon.com/recetaimagen/860/12668.jpg',
+        [
+            new Ingredient('Meat', 1),
+            new Ingredient('French Fries', 20) 
+        ]),
+        new Recipe('Big Fat Burger', 
+        'What else you need to say?', 
+        'https://www.burgerking.com.mx/wp-media-folder-bk-mex//home/ubuntu/wordpress/web/app/uploads/sites/3/2021/02/bk-whopper-jr-1200x800-1.png',
+        [
+            new Ingredient('Buns', 2),
+            new Ingredient('Meat', 1),
+            new Ingredient('Cheese', 1),
+            new Ingredient('Tomatoes', 1)
+        ])
     ];
 
     getRecipes() {
