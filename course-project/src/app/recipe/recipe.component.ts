@@ -22,10 +22,5 @@ export class RecipeComponent implements OnInit{
                 this.recipeSelectedItem = recipe;
             }
         );
-        this.recipeService.ingredientsRecipeAdded.subscribe(
-            (ingredientsRecipe: Ingredient[]) => {
-                this.recipeService.addRecipeIngredients(ingredientsRecipe);
-            }
-        );
     }
 }

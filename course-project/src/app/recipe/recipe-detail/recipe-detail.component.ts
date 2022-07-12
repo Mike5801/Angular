@@ -15,7 +15,7 @@ export class RecipeDetail {
     constructor(private recipeService: RecipeService){ }
 
     addToShopping() {
-        this.recipeService.ingredientsRecipeAdded.emit(this.recipeSelectedDetail.ingredients);
+        this.recipeService.addRecipeIngredients(this.recipeSelectedDetail.ingredients);
     }
 
 }
