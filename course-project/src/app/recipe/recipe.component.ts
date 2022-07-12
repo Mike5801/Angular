@@ -1,6 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { RecipeService } from "./recipe.service";
 import { Recipe } from "./recipe.model";
+import { ShoppingListService } from "../shopping/shopping-list.service";
+import { Ingredient } from "../shared/ingredient.model";
 
 @Component({
     selector: 'app-recipe',
@@ -12,20 +14,18 @@ import { Recipe } from "./recipe.model";
 export class RecipeComponent implements OnInit{
     recipeSelectedItem: Recipe;
 
-    constructor(private recipeService: RecipeService) {
-        
-    }
+    constructor(private recipeService: RecipeService) { }
 
     ngOnInit(): void {
         this.recipeService.recipeSelected.subscribe(
             (recipe: Recipe) => {
                 this.recipeSelectedItem = recipe;
             }
-        );  
-    }
-
-    getSelectedRecipe(selectedRecipe: Recipe) {
-        this.recipeSelectedItem = selectedRecipe;
-        console.log(this.recipeSelectedItem);
+        );
+        this.recipeService.ingredientsRecipeAdded.subscribe(
+            (ingredientsRecipe: Ingredient[]) => {
+                this.recipeService.addRecipeIngredients(ingredientsRecipe);
+            }
+        );
     }
 }
