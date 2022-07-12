@@ -6,10 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'course-project';
-  featureClicked: string = 'recipe';
-
-  onClickedFeature(feature) {
-    this.featureClicked = feature
-  }
+  title = 'Routing';
 }
