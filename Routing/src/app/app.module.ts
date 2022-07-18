@@ -30,6 +30,8 @@ const appRoutes: Routes = [
   { path: '**', redirectTo: '/not-found'}
 ]
 
+//you can change the path matching to be exact by adding a new attribute called pathMatch and set it to 'full'
+
 @NgModule({
   declarations: [
     AppComponent,
