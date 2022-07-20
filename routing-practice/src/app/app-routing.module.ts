@@ -6,6 +6,7 @@ import { AssignmentsComponent } from "./assignments/assignments.component";
 import { ReportsComponent } from "./reports/reports.component";
 import { AssigHistComponent } from "./assig-hist/assig-hist.component";
 import { WorkspaceLinksComponent } from "./workspace-links/workspace-links.component";
+import { UserComponent } from "./user/user.component";
 
 const appRoutes: Routes = [
     { path: '', component: DashboardComponent },
@@ -14,6 +15,7 @@ const appRoutes: Routes = [
     { path: 'reports', component: ReportsComponent },
     { path: 'assign_hist', component: AssigHistComponent },
     { path: 'workspace_links', component: WorkspaceLinksComponent },
+    { path: 'user', component: UserComponent}
 ]
 
 @NgModule({
