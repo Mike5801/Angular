@@ -11,6 +11,7 @@ import { WorkspaceLinksComponent } from './workspace-links/workspace-links.compo
 import { NavbarComponent } from './navbar/navbar.component';
 import { AssignmentsComponent } from './assignments/assignments.component';
 import { FormsModule } from '@angular/forms';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     AssigHistComponent,
     WorkspaceLinksComponent,
     NavbarComponent,
-    AssignmentsComponent
+    AssignmentsComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
