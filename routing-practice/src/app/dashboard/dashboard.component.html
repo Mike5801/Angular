@@ -1,1 +1,42 @@
-<p>dashboard works!</p>
+<div class="container">
+    <h1>Dashboard</h1>
+    <br>
+    <div class="container text-center">
+        <div class="row row-cols-sm-5">
+            <div class="col">
+                <button class="btn btn-outline-secondary" (click)="onNavSubjc()">Subjects</button>
+            </div>
+            <div class="col">
+                <button class="btn btn-outline-secondary" (click)="onNavAssign()">Assignments</button>
+            </div>
+            <div class="col">
+                <button class="btn btn-outline-secondary" (click)="onNavReports()">Reports</button>
+            </div>
+            <div class="col">
+                <button class="btn btn-outline-secondary" (click)="onNavAH()">Assignment's History</button>
+            </div>
+            <div class="col">
+                <button class="btn btn-outline-secondary" (click)="onNavWL()">workspace-links</button>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="list-group">
+                <a class="list-group-item list-group-item-action" routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact: true}"
+                routerLink="to_do_assignments" style="cursor: pointer;">To do Assignments</a>
+                <a class="list-group-item list-group-item-action" routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact: true}"
+                routerLink="error_estimation_avg" style="cursor: pointer;">Error estimation average</a>
+                <a class="list-group-item list-group-item-action" routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact: true}"
+                routerLink="efficiency" style="cursor: pointer;">Efficiency</a>
+            </div>
+        </div>
+        <div class="col 9">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

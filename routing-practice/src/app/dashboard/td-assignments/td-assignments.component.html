@@ -1,0 +1,21 @@
+<h3>To do Assignments Component</h3>
+<div class="container">
+    <div class="list-group">
+        <div class="card" *ngFor="let assignment of assignments">
+            <div class="card-body">
+                <h5 class="card-title">{{ assignment.name }}</h5>
+                <div class="row">
+                    <div class="col-sm-11">
+                        <h6 class="card-subtitle mb-2 text-muted">
+                            Due date: {{ assignment.dueDate.toISOString().substr(8,2) }}/{{ assignment.dueDate.toISOString().substr(5,2) }}/{{ assignment.dueDate.toISOString().substr(0,4) }}
+                        </h6>
+                    </div>
+                    <div class="col-sm-1 text-end">
+                        <a routerLink=""><h6 class="card-subtitle mb-2"><i class="bi bi-arrow-right" style="font-size: 25px;"></i></h6></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

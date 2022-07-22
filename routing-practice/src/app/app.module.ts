@@ -12,6 +12,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AssignmentsComponent } from './assignments/assignments.component';
 import { FormsModule } from '@angular/forms';
 import { UserComponent } from './user/user.component';
+import { TdAssignmentsComponent } from './dashboard/td-assignments/td-assignments.component';
+import { ErrorEstimationComponent } from './dashboard/error-estimation/error-estimation.component';
+import { EfficiencyComponent } from './dashboard/efficiency/efficiency.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,11 @@ import { UserComponent } from './user/user.component';
     WorkspaceLinksComponent,
     NavbarComponent,
     AssignmentsComponent,
-    UserComponent
+    UserComponent,
+    TdAssignmentsComponent,
+    ErrorEstimationComponent,
+    EfficiencyComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
