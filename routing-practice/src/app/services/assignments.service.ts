@@ -21,4 +21,8 @@ export class AssignmentsService {
     getAssignmnets() {
         return this.assignments.slice();
     }
+
+    getAssignment(id: number) {
+        return this.assignments[id - 1];
+    }
 }

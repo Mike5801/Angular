@@ -1,1 +1,13 @@
-<p>assignment works!</p>
+<div class="card">
+    <div class="card-body">
+      <h5 class="card-title">{{ assignment.name }}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Due date: {{ assignment.dueDate.toISOString().substr(8,2) }}/{{ assignment.dueDate.toISOString().substr(5,2) }}/{{ assignment.dueDate.toISOString().substr(0,4) }}</h6>
+      <p class="card-text">
+        The name of the assignment is {{ assignment.name }} and it needs to be done before {{ assignment.dueDate.toISOString().substr(8,2) }}/{{ assignment.dueDate.toISOString().substr(5,2) }}/{{ assignment.dueDate.toISOString().substr(0,4) }} at midnight
+    </p>
+      <a href="#" class="card-link">Workspace Link 1</a>
+      <a href="#" class="card-link">Workspace Link 2</a>
+    </div>
+  </div>
+
+
