@@ -1,5 +1,19 @@
 <div class="container">
     <h1>Assignments</h1>
-    <br>
+    <div class="row">
+        <div class="col-sm-2">
+            <div class="list-group">
+                <a class="list-group-item list-group-item-action" routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact: true}"
+                routerLink="new_assignment" style="cursor: pointer;">New Assignment</a>
+                <a class="list-group-item list-group-item-action" routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact: true}"
+                routerLink="assignment_list" style="cursor: pointer;">Assignments List</a>
+            </div>
+        </div>
+        <div class="col 10">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
 </div>
 

@@ -16,6 +16,9 @@ import { TdAssignmentsComponent } from './dashboard/td-assignments/td-assignment
 import { ErrorEstimationComponent } from './dashboard/error-estimation/error-estimation.component';
 import { EfficiencyComponent } from './dashboard/efficiency/efficiency.component';
 import { HomeComponent } from './home/home.component';
+import { NewAssignmentComponent } from './assignments/new-assignment/new-assignment.component';
+import { AssignmentListComponent } from './assignments/assignment-list/assignment-list.component';
+import { AssignmentComponent } from './assignments/assignment/assignment.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,10 @@ import { HomeComponent } from './home/home.component';
     TdAssignmentsComponent,
     ErrorEstimationComponent,
     EfficiencyComponent,
-    HomeComponent
+    HomeComponent,
+    NewAssignmentComponent,
+    AssignmentListComponent,
+    AssignmentComponent
   ],
   imports: [
     BrowserModule,

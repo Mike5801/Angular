@@ -11,6 +11,9 @@ import { TdAssignmentsComponent } from "./dashboard/td-assignments/td-assignment
 import { ErrorEstimationComponent } from "./dashboard/error-estimation/error-estimation.component";
 import { EfficiencyComponent } from "./dashboard/efficiency/efficiency.component";
 import { HomeComponent } from "./home/home.component";
+import { NewAssignmentComponent } from "./assignments/new-assignment/new-assignment.component";
+import { AssignmentListComponent } from "./assignments/assignment-list/assignment-list.component";
+import { AssignmentComponent } from "./assignments/assignment/assignment.component";
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent },
@@ -20,7 +23,12 @@ const appRoutes: Routes = [
         { path: 'efficiency', component: EfficiencyComponent },
     ]},
     { path: 'subjects', component: SubjectsComponent },
-    { path: 'assignments', component: AssignmentsComponent},
+    { path: 'assignments', component: AssignmentsComponent, children: [
+        { path: 'new_assignment', component: NewAssignmentComponent },
+        { path: 'assignment_list', component: AssignmentListComponent, children: [
+            { path: ':id', component: AssignmentComponent}
+        ] },
+    ] },
     { path: 'reports', component: ReportsComponent },
     { path: 'assign_hist', component: AssigHistComponent },
     { path: 'workspace_links', component: WorkspaceLinksComponent },
