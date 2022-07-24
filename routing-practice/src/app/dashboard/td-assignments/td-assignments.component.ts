@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Assignment } from 'src/app/models/assignment.model';
 import { AssignmentsService } from 'src/app/services/assignments.service';
 
@@ -10,7 +11,7 @@ import { AssignmentsService } from 'src/app/services/assignments.service';
 export class TdAssignmentsComponent implements OnInit {
   assignments : Assignment[];
 
-  constructor(private assignmentsService: AssignmentsService) { }
+  constructor(private assignmentsService: AssignmentsService, private router: Router) { }
 
   ngOnInit(): void {
     this.assignments = this.assignmentsService.assignments;
@@ -20,5 +21,4 @@ export class TdAssignmentsComponent implements OnInit {
       }
     )
   }
-
 }
