@@ -11,7 +11,7 @@ import { AssignmentsService } from 'src/app/services/assignments.service';
 export class AssignmentListComponent implements OnInit {
   assignments: Assignment[];
 
-  constructor(private assignmentsService: AssignmentsService, private router: Router, private route: ActivatedRoute) { }
+  constructor(private assignmentsService: AssignmentsService) { }
 
   ngOnInit(): void {
     this.assignments = this.assignmentsService.getAssignmnets();
