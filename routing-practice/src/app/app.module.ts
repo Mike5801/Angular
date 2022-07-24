@@ -19,6 +19,7 @@ import { HomeComponent } from './home/home.component';
 import { NewAssignmentComponent } from './assignments/new-assignment/new-assignment.component';
 import { AssignmentListComponent } from './assignments/assignment-list/assignment-list.component';
 import { AssignmentComponent } from './assignments/assignment/assignment.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { AssignmentComponent } from './assignments/assignment/assignment.compone
     NewAssignmentComponent,
     AssignmentListComponent,
     AssignmentComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,

@@ -14,6 +14,7 @@ import { HomeComponent } from "./home/home.component";
 import { NewAssignmentComponent } from "./assignments/new-assignment/new-assignment.component";
 import { AssignmentListComponent } from "./assignments/assignment-list/assignment-list.component";
 import { AssignmentComponent } from "./assignments/assignment/assignment.component";
+import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent },
@@ -32,7 +33,9 @@ const appRoutes: Routes = [
     { path: 'reports', component: ReportsComponent },
     { path: 'assign_hist', component: AssigHistComponent },
     { path: 'workspace_links', component: WorkspaceLinksComponent },
-    { path: 'user', component: UserComponent}
+    { path: 'user', component: UserComponent},
+    { path: 'not-found', component: PageNotFoundComponent },
+    { path: '**', redirectTo: '/not-found'}
 ]
 
 @NgModule({
