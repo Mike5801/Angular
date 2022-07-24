@@ -37,7 +37,7 @@ import { AssignmentComponent } from './assignments/assignment/assignment.compone
     HomeComponent,
     NewAssignmentComponent,
     AssignmentListComponent,
-    AssignmentComponent
+    AssignmentComponent,
   ],
   imports: [
     BrowserModule,

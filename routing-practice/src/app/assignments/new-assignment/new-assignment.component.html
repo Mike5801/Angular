@@ -1,3 +1,15 @@
 <div class="container">
-    <p>new-assignment works!</p>
+    <h2>Create new assignment</h2>
+    <div class="row col-sm-12">
+        <div class="col">
+            <label for="name" class="form-label">Name of the assignment</label>
+            <input type="text" class="form-control" id="name" placeholder="Actividad 1" [(ngModel)]="name">
+            <label for="dueDate" class="form-labe">Due Date</label>
+            <input type="date" class="form-control" id="dueDate" [(ngModel)]="dueDate">
+            <br>
+            <div class="text-end">
+                <button class="btn btn-primary" (click)="onAddAssignment()">Add asignment</button>
+            </div>
+        </div>
+    </div>
 </div>
