@@ -20,6 +20,7 @@ import { NewAssignmentComponent } from './assignments/new-assignment/new-assignm
 import { AssignmentListComponent } from './assignments/assignment-list/assignment-list.component';
 import { AssignmentComponent } from './assignments/assignment/assignment.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { CanDeactivateGuard } from './services/guards/can-deactivate.guard';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     FormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [CanDeactivateGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

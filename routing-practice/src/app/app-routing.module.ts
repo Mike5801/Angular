@@ -15,6 +15,7 @@ import { NewAssignmentComponent } from "./assignments/new-assignment/new-assignm
 import { AssignmentListComponent } from "./assignments/assignment-list/assignment-list.component";
 import { AssignmentComponent } from "./assignments/assignment/assignment.component";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
+import { CanDeactivateGuard } from "./services/guards/can-deactivate.guard";
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent },
@@ -25,7 +26,7 @@ const appRoutes: Routes = [
     ]},
     { path: 'subjects', component: SubjectsComponent },
     { path: 'assignments', component: AssignmentsComponent, children: [
-        { path: 'new_assignment', component: NewAssignmentComponent },
+        { path: 'new_assignment', component: NewAssignmentComponent, canDeactivate: [CanDeactivateGuard] },
         { path: 'assignment_list', component: AssignmentListComponent, children: [
             { path: ':id', component: AssignmentComponent}
         ] },
