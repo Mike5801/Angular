@@ -21,6 +21,9 @@ import { AssignmentListComponent } from './assignments/assignment-list/assignmen
 import { AssignmentComponent } from './assignments/assignment/assignment.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CanDeactivateGuard } from './services/guards/can-deactivate.guard';
+import { UserManagementComponent } from './user/user-management/user-management.component';
+import { AuthService } from './services/auth.service';
+import { AuthGuardService } from './services/guards/auth.guard';
 
 @NgModule({
   declarations: [
@@ -41,13 +44,14 @@ import { CanDeactivateGuard } from './services/guards/can-deactivate.guard';
     AssignmentListComponent,
     AssignmentComponent,
     PageNotFoundComponent,
+    UserManagementComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule
   ],
-  providers: [CanDeactivateGuard],
+  providers: [CanDeactivateGuard, AuthGuardService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

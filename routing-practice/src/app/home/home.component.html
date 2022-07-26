@@ -1,3 +1,8 @@
 <div class="container">
     <h1>Home</h1>
+    <button class="btn btn-primary" (click)="onLoginAdmin()">Login as Admin</button>
+    <p *ngIf="admin; else notLoggedIn">You have logged in as an Administrator</p>
+    <ng-template #notLoggedIn>
+        <p>You are not an administrator</p>
+    </ng-template>
 </div>

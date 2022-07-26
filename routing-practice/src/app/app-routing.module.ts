@@ -16,6 +16,8 @@ import { AssignmentListComponent } from "./assignments/assignment-list/assignmen
 import { AssignmentComponent } from "./assignments/assignment/assignment.component";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 import { CanDeactivateGuard } from "./services/guards/can-deactivate.guard";
+import { UserManagementComponent } from "./user/user-management/user-management.component";
+import { AuthGuardService } from "./services/guards/auth.guard";
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent },
@@ -34,7 +36,12 @@ const appRoutes: Routes = [
     { path: 'reports', component: ReportsComponent },
     { path: 'assign_hist', component: AssigHistComponent },
     { path: 'workspace_links', component: WorkspaceLinksComponent },
-    { path: 'user', component: UserComponent},
+    { path: 'user', component: UserComponent, canActivateChild: [AuthGuardService],
+        children: 
+            [
+                { path: 'manage_user', component: UserManagementComponent }
+            ] 
+    },
     { path: 'not-found', component: PageNotFoundComponent },
     { path: '**', redirectTo: '/not-found'}
 ]
