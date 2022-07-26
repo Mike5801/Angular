@@ -7,9 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'course-project';
-  featureClicked: string = 'recipe';
-
-  onClickedFeature(feature) {
-    this.featureClicked = feature
-  }
 }

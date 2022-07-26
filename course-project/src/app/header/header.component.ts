@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from "@angular/core";
+import { Component } from "@angular/core";
 
 @Component({
     selector: 'app-header',
@@ -8,21 +8,9 @@ import { Component, EventEmitter, Output } from "@angular/core";
 
 export class Header {
     collapsed = true;
-    @Output() featureClicked = new EventEmitter<string>();
 
     constructor() {
 
     }
 
-    onRecipesClick(feature: string) {
-        this.featureClicked.emit(
-            feature
-        )
-    }
-
-    onShoppingClick(feature: string) {
-        this.featureClicked.emit(
-            feature
-        )
-    }
 }
